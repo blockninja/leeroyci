@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/fallenhitokiri/leeroyci/database"
-	"github.com/fallenhitokiri/leeroyci/notification"
+	"github.com/nii236/leeroyci/database"
+	"github.com/nii236/leeroyci/notification"
 )
 
 // QueueJob represents a job put on the runner queue. The status channel is

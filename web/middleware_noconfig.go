@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/fallenhitokiri/leeroyci/database"
+	"github.com/nii236/leeroyci/database"
 )
 
 // middlewareNoConfig redirects to /setup if there is no valid configuration

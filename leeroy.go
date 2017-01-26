@@ -6,10 +6,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/fallenhitokiri/leeroyci/database"
-	"github.com/fallenhitokiri/leeroyci/runner"
-	"github.com/fallenhitokiri/leeroyci/web"
-	"github.com/fallenhitokiri/leeroyci/websocket"
+	"github.com/nii236/leeroyci/database"
+	"github.com/nii236/leeroyci/runner"
+	"github.com/nii236/leeroyci/web"
+	"github.com/nii236/leeroyci/websocket"
 )
 
 func main() {
@@ -19,12 +19,12 @@ func main() {
 
 	router := web.Routes()
 	config := database.GetConfig()
-	
+
 	httpd := &http.Server{
-		Addr: port(),
-		Handler: router,
-		ReadTimeout: 10 * time.Second,
-		WriteTimeout: 10 * time.Second,
+		Addr:           port(),
+		Handler:        router,
+		ReadTimeout:    10 * time.Second,
+		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
 

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/fallenhitokiri/leeroyci/database"
+	"github.com/nii236/leeroyci/database"
 )
 
 func TestEndpointCampfire(t *testing.T) {

@@ -1,8 +1,8 @@
 package notification
 
 import (
-	"github.com/fallenhitokiri/leeroyci/database"
-	"github.com/fallenhitokiri/leeroyci/websocket"
+	"github.com/nii236/leeroyci/database"
+	"github.com/nii236/leeroyci/websocket"
 )
 
 func sendWebsocket(job *database.Job, event string) {

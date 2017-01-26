@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/fallenhitokiri/leeroyci/database"
+	"github.com/nii236/leeroyci/database"
 )
 
 var (

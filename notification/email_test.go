@@ -3,7 +3,7 @@ package notification
 import (
 	"testing"
 
-	"github.com/fallenhitokiri/leeroyci/database"
+	"github.com/nii236/leeroyci/database"
 )
 
 func TestEmailSubject(t *testing.T) {

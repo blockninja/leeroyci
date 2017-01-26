@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/fallenhitokiri/leeroyci/database"
+	"github.com/nii236/leeroyci/database"
 )
 
 var hipchatEndpoint = "https://www.hipchat.com/v1/rooms/message?auth_token=%s"

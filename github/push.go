@@ -9,8 +9,8 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/fallenhitokiri/leeroyci/database"
-	"github.com/fallenhitokiri/leeroyci/runner"
+	"github.com/nii236/leeroyci/database"
+	"github.com/nii236/leeroyci/runner"
 )
 
 type pushCallback struct {

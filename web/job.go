@@ -6,8 +6,8 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/fallenhitokiri/leeroyci/database"
-	"github.com/fallenhitokiri/leeroyci/runner"
+	"github.com/nii236/leeroyci/database"
+	"github.com/nii236/leeroyci/runner"
 )
 
 const limit = 20

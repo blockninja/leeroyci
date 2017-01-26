@@ -3,7 +3,7 @@ package notification
 import (
 	"log"
 
-	"github.com/fallenhitokiri/leeroyci/database"
+	"github.com/nii236/leeroyci/database"
 )
 
 // Notify sends all relevant notifications for a job that are configured for
