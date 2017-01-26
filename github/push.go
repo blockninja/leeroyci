@@ -9,6 +9,7 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/nii236/leeroyci/database"
 	"github.com/nii236/leeroyci/runner"
 )
@@ -145,7 +146,7 @@ func handlePush(req *http.Request) {
 	var callback pushCallback
 
 	err = json.Unmarshal(body, &callback)
-
+	spew.Dump(callback)
 	if err != nil {
 		log.Println("Could not unmarshal request")
 		return
