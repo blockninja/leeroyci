@@ -3,6 +3,7 @@ package notification
 import (
 	"log"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/nii236/leeroyci/database"
 )
 
@@ -10,16 +11,15 @@ import (
 // the jobs repository.
 func Notify(job *database.Job, event string) {
 	repo, err := database.GetRepositoryByID(job.RepositoryID)
-
 	if err != nil {
 		log.Println(err)
 		return
 	}
 
 	sendWebsocket(job, event)
-
-	for _, notificaiton := range repo.Notifications {
-		switch notificaiton.Service {
+	spew.Dump(repo)
+	for _, notification := range repo.Notifications {
+		switch notification.Service {
 		case database.NotificationServiceEmail:
 			sendEmail(job, event)
 		case database.NotificationServiceSlack:

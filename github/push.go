@@ -7,9 +7,9 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"net/url"
 	"strings"
 
-	"github.com/davecgh/go-spew/spew"
 	"github.com/nii236/leeroyci/database"
 	"github.com/nii236/leeroyci/runner"
 )
@@ -107,7 +107,7 @@ func (p *pushCallback) createJob() error {
 	}
 
 	repo := database.GetRepository(p.repositoryURL())
-
+	log.Println("DB Repository:", repo)
 	job := database.CreateJob(
 		repo,
 		p.branch(),
@@ -144,13 +144,16 @@ func handlePush(req *http.Request) {
 	}
 
 	var callback pushCallback
-
 	err = json.Unmarshal(body, &callback)
-	spew.Dump(callback)
 	if err != nil {
 		log.Println("Could not unmarshal request")
 		return
 	}
-
+	repoURL, err := url.Parse(callback.repositoryURL())
+	if err != nil {
+		log.Println("Could not parse URL")
+		return
+	}
+	callback.Repository.URL = repoURL.Host + repoURL.Path
 	go callback.createJob()
 }

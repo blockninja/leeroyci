@@ -40,7 +40,10 @@ func sendSlack(job *database.Job, event string) {
 	}
 
 	payload, err := payloadSlack(job, event, channel)
-
+	if err != nil {
+		log.Println("Could not create payload")
+		return
+	}
 	_, err = http.Post(
 		endpoint,
 		"application/json",
