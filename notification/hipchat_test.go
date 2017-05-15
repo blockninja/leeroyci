@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/nii236/leeroyci/database"
+	"github.com/blockninja/leeroyci/database"
 )
 
 func TestBuildHipChat(t *testing.T) {

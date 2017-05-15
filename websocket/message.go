@@ -4,7 +4,7 @@
 package websocket
 
 import (
-	"github.com/nii236/leeroyci/database"
+	"github.com/blockninja/leeroyci/database"
 )
 
 // Message contains all fields consumed by differetn websockets to render

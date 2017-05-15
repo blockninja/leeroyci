@@ -3,8 +3,8 @@ package notification
 import (
 	"log"
 
+	"github.com/blockninja/leeroyci/database"
 	"github.com/davecgh/go-spew/spew"
-	"github.com/nii236/leeroyci/database"
 )
 
 // Notify sends all relevant notifications for a job that are configured for
@@ -20,6 +20,8 @@ func Notify(job *database.Job, event string) {
 	spew.Dump(repo)
 	for _, notification := range repo.Notifications {
 		switch notification.Service {
+		case database.NotificationServiceFile:
+			sendFile(job, event)
 		case database.NotificationServiceEmail:
 			sendEmail(job, event)
 		case database.NotificationServiceSlack:

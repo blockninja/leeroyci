@@ -4,7 +4,7 @@ package runner
 import (
 	"sync"
 
-	"github.com/nii236/leeroyci/database"
+	"github.com/blockninja/leeroyci/database"
 )
 
 var manager taskManager

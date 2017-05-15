@@ -7,6 +7,9 @@ import (
 )
 
 const (
+	// NotificationServiceFile type for file notifications.
+	NotificationServiceFile = "file"
+
 	// NotificationServiceEmail type for email notifications.
 	NotificationServiceEmail = "email"
 

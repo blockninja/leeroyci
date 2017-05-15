@@ -9,7 +9,7 @@ import (
 
 	"github.com/jpoehls/gophermail"
 
-	"github.com/nii236/leeroyci/database"
+	"github.com/blockninja/leeroyci/database"
 )
 
 // sendEmail sends an email notification. Event specifies which notification to

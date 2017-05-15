@@ -8,7 +8,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/nii236/leeroyci/database"
+	"github.com/blockninja/leeroyci/database"
 )
 
 // Payload Slack expects to be POSTed to their API.

@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nii236/leeroyci/database"
+	"github.com/blockninja/leeroyci/database"
 )
 
 func TestQueueJobEnqueue(t *testing.T) {

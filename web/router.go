@@ -8,7 +8,7 @@ import (
 	"github.com/gorilla/sessions"
 	"github.com/justinas/alice"
 
-	"github.com/nii236/leeroyci/websocket"
+	"github.com/blockninja/leeroyci/websocket"
 )
 
 var sessionStore = sessions.NewCookieStore([]byte("something-very-secret"))

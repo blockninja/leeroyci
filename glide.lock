@@ -1,10 +1,16 @@
-hash: 0092b4f9a3c263ce3fd37073776fcfd38e5b0d6d3878ac7b39461d753be81054
-updated: 2017-01-26T20:16:17.721642184+08:00
+hash: c39553c6d194c3fd390f9f144e3d28ebe9f40fc767dcb4c06574d6c7ad009bd5
+updated: 2017-05-15T16:58:32.068239736+08:00
 imports:
+- name: github.com/BurntSushi/toml
+  version: b26d9c308763d68093482582cea63d69be07a0f0
 - name: github.com/daaku/go.zipexe
   version: a5fe2436ffcb3236e175e5149162b41cd28bd27d
+- name: github.com/davecgh/go-spew
+  version: 346938d642f2ec3594ed81d874461961cd0faa76
+  subpackages:
+  - spew
 - name: github.com/GeertJohan/go.rice
-  version: 4bbccbfa39e784796e483270451217d3369ecfbe
+  version: c02ca9a983da5807ddf7d796784928f5be4afd09
   subpackages:
   - embedded
 - name: github.com/gorilla/context
@@ -12,7 +18,7 @@ imports:
 - name: github.com/gorilla/mux
   version: 392c28fe23e1c45ddba891b0320b3b5df220beea
 - name: github.com/gorilla/schema
-  version: dfd60678a6033f19803293695dcd30f40ed3cd19
+  version: 1c72d033473165ade8a126ba64180d76a9212dcd
 - name: github.com/gorilla/securecookie
   version: 667fe4e3466a040b780561fe9b51a83a3753eefc
 - name: github.com/gorilla/sessions
@@ -26,9 +32,9 @@ imports:
 - name: github.com/justinas/alice
   version: 052b8b6c18edb9db317af86806d8e00ebaa94160
 - name: github.com/kardianos/osext
-  version: c2c54e542fb797ad986b31721e1baedf214ca413
+  version: ae77be60afb1dcacde03767a8c37337fad28ac14
 - name: github.com/lib/pq
-  version: 67c3f2a8884c9b1aac5503c8d42ae4f73a93511c
+  version: 2704adc878c21e1329f46f6e56a1c387d788ff94
   subpackages:
   - oid
 - name: github.com/mattn/go-sqlite3
@@ -36,12 +42,12 @@ imports:
 - name: github.com/sloonz/go-qprintable
   version: 775b3a4592d5bfc47b0ba398ec0d4dba018e5926
 - name: golang.org/x/crypto
-  version: 9477e0b78b9ac3d0b03822fd95422e2fe07627cd
+  version: 3543873453996aaab2fc6b3928a35fc5ca2b5afb
   subpackages:
   - bcrypt
   - blowfish
 - name: golang.org/x/net
-  version: 87635b2611e4683a6f0aa595c36683021a00b2e4
+  version: da118f7b8e5954f39d0d2130ab35d4bf0e3cb344
   subpackages:
   - context
   - websocket

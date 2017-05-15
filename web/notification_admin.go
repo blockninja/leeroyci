@@ -8,7 +8,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/gorilla/schema"
 
-	"github.com/nii236/leeroyci/database"
+	"github.com/blockninja/leeroyci/database"
 )
 
 type notificationAdminForm struct {
@@ -77,6 +77,7 @@ func viewAdminCreateNotification(w http.ResponseWriter, r *http.Request) {
 	ctx["services"] = []string{
 		database.NotificationServiceEmail,
 		database.NotificationServiceSlack,
+		database.NotificationServiceFile,
 		database.NotificationServiceCampfire,
 		database.NotificationServiceHipchat,
 	}
@@ -122,6 +123,7 @@ func viewAdminUpdateNotification(w http.ResponseWriter, r *http.Request) {
 	ctx["notification"] = not
 	ctx["services"] = []string{
 		database.NotificationServiceEmail,
+		database.NotificationServiceFile,
 		database.NotificationServiceSlack,
 		database.NotificationServiceHipchat,
 		database.NotificationServiceCampfire,

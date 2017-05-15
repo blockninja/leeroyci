@@ -3,7 +3,7 @@ package websocket
 import (
 	"testing"
 
-	"github.com/nii236/leeroyci/database"
+	"github.com/blockninja/leeroyci/database"
 )
 
 func TestNewMessage(t *testing.T) {

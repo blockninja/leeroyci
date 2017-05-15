@@ -9,7 +9,7 @@ import (
 
 	"github.com/GeertJohan/go.rice"
 
-	"github.com/nii236/leeroyci/database"
+	"github.com/blockninja/leeroyci/database"
 )
 
 // Supported events

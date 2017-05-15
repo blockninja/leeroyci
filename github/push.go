@@ -10,8 +10,8 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/nii236/leeroyci/database"
-	"github.com/nii236/leeroyci/runner"
+	"github.com/blockninja/leeroyci/database"
+	"github.com/blockninja/leeroyci/runner"
 )
 
 type pushCallback struct {
