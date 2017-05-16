@@ -4,7 +4,6 @@ import (
 	"log"
 
 	"github.com/blockninja/leeroyci/database"
-	"github.com/davecgh/go-spew/spew"
 )
 
 // Notify sends all relevant notifications for a job that are configured for
@@ -17,7 +16,7 @@ func Notify(job *database.Job, event string) {
 	}
 
 	sendWebsocket(job, event)
-	spew.Dump(repo)
+
 	for _, notification := range repo.Notifications {
 		switch notification.Service {
 		case database.NotificationServiceFile:

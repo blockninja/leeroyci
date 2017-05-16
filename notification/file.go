@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"io/ioutil"
 	"log"
+	"os"
 
 	"github.com/BurntSushi/toml"
 
@@ -40,5 +41,14 @@ func sendFile(job *database.Job, event string) {
 	}
 
 	log.Println(string(b.Bytes()))
-	ioutil.WriteFile("/home/users/leeroyci/go/bin/postbox", b.Bytes(), 0644)
+	err = os.MkdirAll("/home/users/leeroyci/go/bin/postbox", os.ModePerm)
+	if err != nil {
+		log.Println(err)
+		return
+	}
+	err = ioutil.WriteFile("/home/users/leeroyci/go/bin/postbox/leeroy", b.Bytes(), 0644)
+	if err != nil {
+		log.Println(err)
+		return
+	}
 }
