@@ -2,6 +2,7 @@ package notification
 
 import (
 	"bytes"
+	"fmt"
 	"io/ioutil"
 	"log"
 
@@ -10,6 +11,7 @@ import (
 	"github.com/blockninja/leeroyci/database"
 )
 
+// FileInfo contains the struct to generate the TOML from
 type FileInfo struct {
 	Channel string
 	Message string
@@ -25,11 +27,10 @@ func sendFile(job *database.Job, event string) {
 		log.Println(err)
 		return
 	}
-	txtMessage := message(job, database.NotificationServiceEmail, event, TypeText)
 
 	payload := &FileInfo{
 		Channel: channel,
-		Message: txtMessage,
+		Message: buildMessage(job),
 	}
 	var b bytes.Buffer
 
@@ -46,4 +47,19 @@ func sendFile(job *database.Job, event string) {
 		log.Println(err)
 		return
 	}
+}
+
+func buildMessage(job *database.Job) string {
+	if job.Passed() {
+		return failMessage(job.Branch, job.Name)
+	}
+	return passMessage(job.Branch, job.Name)
+}
+
+func failMessage(branch, name string) string {
+	return fmt.Sprintf(":broken_heart: Branch %s build failed by %s", branch, name)
+}
+
+func passMessage(branch, name string) string {
+	return fmt.Sprintf(":heart: Branch %s build passed by %s", branch, name)
 }
