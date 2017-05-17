@@ -51,9 +51,9 @@ func sendFile(job *database.Job, event string) {
 
 func buildMessage(job *database.Job) string {
 	if job.Passed() {
-		return failMessage(job.Branch, job.Name)
+		return passMessage(job.Branch, job.Name)
 	}
-	return passMessage(job.Branch, job.Name)
+	return failMessage(job.Branch, job.Name)
 }
 
 func failMessage(branch, name string) string {
