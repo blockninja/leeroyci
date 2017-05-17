@@ -57,9 +57,9 @@ func buildMessage(job *database.Job) string {
 }
 
 func failMessage(branch, name string) string {
-	return fmt.Sprintf(":broken_heart: Branch %s build failed by %s", branch, name)
+	return fmt.Sprintf(":poop: Branch %s build pooped out by %s", branch, name)
 }
 
 func passMessage(branch, name string) string {
-	return fmt.Sprintf(":heart: Branch %s build passed by %s", branch, name)
+	return fmt.Sprintf(":heart: Branch %s build made with love by %s", branch, name)
 }
