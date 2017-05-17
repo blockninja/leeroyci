@@ -50,7 +50,14 @@ func sendFile(job *database.Job, event string) {
 }
 
 func buildMessage(job *database.Job) string {
-	if job.Passed() {
+	jobStatus := true
+	for _, jobLog := range job.CommandLogs {
+		if !jobLog.Passed() {
+			jobStatus = false
+		}
+	}
+
+	if jobStatus {
 		return passMessage(job.Branch, job.Name)
 	}
 	return failMessage(job.Branch, job.Name)
